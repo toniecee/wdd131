@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Anthony Agbonoga</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Anthony Agbonoga, personal landing page">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">I-Learn</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener">Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <main>
+    <h1>Anthony Agbonoga</h1>
+
+    <div class="cards-grid">
+      <!-- Card 1: About Me -->
+      <section class="card about-card">
+        <h2>About Me</h2>
+        <div class="card-body">
+          <div class="bio-section">
+            <p>My name is Anthony and I live with my family in Benin City, Edo State, Nigeria. I am currently pursuing Software Development through BYU-Pathway Worldwide and BYU-Idaho. I enjoy building practical web applications, data tools, and spending time learning modern technologies.</p>
+            <img class="profile-img" src="images/profile.webp" alt="Anthony Agbonoga portrait" width="160" height="200" loading="lazy">
+          </div>
+
+          <h3 class="location-heading">Benin City, Nigeria</h3>
+
+          <div class="country-section">
+            <figure class="flag-figure">
+              <img src="images/nigeria-flag.webp" alt="Official Flag of Nigeria" width="200" height="90" loading="lazy">
+              <figcaption>Official Flag of Nigeria</figcaption>
+            </figure>
+            <p class="country-desc">Nigeria is the most populous country in Africa, situated on the Gulf of Guinea. Benin City is famous worldwide for the historic kingdom's exquisite bronze artworks, cultural heritage, and thriving modern agricultural and commercial trade.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 2: Web Dev Resources -->
+      <section class="card resources-card">
+        <h2>Web Dev Resources</h2>
+        <div class="card-body">
+          <ul class="resource-links">
+            <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
+            <li><a href="https://www.smashingmagazine.com" target="_blank" rel="noopener">Smashing Magazine</a></li>
+            <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
+            <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3 Schools</a></li>
+            <li><a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a></li>
+            <li><a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+    <footer>
+    <p>&copy;<span id="currentyear"></span> | Anthony Agbonoga | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+    
+</body>
+</html>
