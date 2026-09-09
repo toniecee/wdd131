@@ -49,6 +49,8 @@ header h1 {
 
 /* Navigation - Mobile (Hidden by default) */
 nav {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
