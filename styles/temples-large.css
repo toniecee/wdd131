@@ -1,0 +1,35 @@
+@media (min-width: 650px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  #menu {
+    display: none; /* Hide hamburger on larger screens */
+  }
+
+  nav {
+    width: auto;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  .navigation a {
+    border-top: none;
+    border-radius: 4px;
+    padding: 0.5rem 0.85rem;
+  }
+
+  /* Multi-column Grid for 9 Figures */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+  }
+}
