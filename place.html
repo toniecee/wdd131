@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria | Country Profile</title>
+  <meta name="description" content="WDD 131 Country Page assignment for Nigeria featuring demographic facts, local weather, and responsive layout.">
+  <meta name="author" content="Anthony Agbonoga">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Nigeria</h1>
+  </header>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 800px)">
+        <img src="images/hero-small.webp" alt="Landscape of Nigeria" width="1200" height="600">
+      </picture>
+    </div>
+
+    <!-- Data Card -->
+    <section class="card data-card">
+      <h2>Data</h2>
+      <div class="data-grid">
+        <span class="label">Area:</span>
+        <span class="value">923,768 sq km</span>
+
+        <span class="label">Population:</span>
+        <span class="value">220,000,000</span>
+
+        <span class="label">Capital:</span>
+        <span class="value">Abuja</span>
+
+        <span class="label">Languages:</span>
+        <span class="value">English, Hausa, Yoruba, Igbo</span>
+
+        <span class="label">Currency:</span>
+        <span class="value">Nigerian Naira (₦)</span>
+
+        <span class="label">Time Zone:</span>
+        <span class="value">WAT (UTC+1)</span>
+
+        <span class="label">Calling Code:</span>
+        <span class="value">+234</span>
+
+        <span class="label">Internet TLD:</span>
+        <span class="value">.ng</span>
+      </div>
+    </section>
+
+    <!-- Weather Card -->
+    <section class="card weather-card">
+      <h2 class="weather-heading">Weather</h2>
+      <img class="weather-icon-mobile" src="images/weather.svg" alt="Weather condition icon" width="64" height="64">
+      <div class="data-grid">
+        <span class="label">Temperature:</span>
+        <span class="value"><span id="temp">28</span> °C</span>
+
+        <span class="label">Conditions:</span>
+        <span class="value">Partly Cloudy</span>
+
+        <span class="label">Wind:</span>
+        <span class="value"><span id="wind">12</span> km/h</span>
+
+        <span class="label">Wind Chill:</span>
+        <span class="value" id="wind-chill"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="current-year"></span> 🌴 Anthony Agbonoga 🌴 Nigeria</p>
+    <p id="last-modified"></p>
+  </footer>
+
+</body>
+</html>

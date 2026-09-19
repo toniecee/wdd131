@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #008751;       /* Nigerian Flag Green */
+  --accent-color: #004d2c;        /* Deep green accent bar */
+  --white: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text-color: #222222;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: #fdfdfd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header with accent bottom border */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 8px solid var(--accent-color);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Mobile Layout */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.weather-icon-mobile {
+  display: block;
+  margin: 0.5rem auto 1.25rem;
+}
+
+/* Label: Value Grid matching wireframe alignment */
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+  column-gap: 0.75rem;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.data-grid .label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.data-grid .value {
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-top: 8px solid var(--accent-color);
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* =========================================================
+   WIDE VIEW (Matches desktop wireframe and screenshot)
+========================================================= */
+@media (min-width: 800px) {
+  main {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero img {
+    height: 580px;
+    object-fit: cover;
+  }
+
+  /* Cards become translucent overlays */
+  .card {
+    position: absolute;
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    padding: 0 0 1.25rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+
+  /* Solid green card headers */
+  .card h2 {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.6rem 1.25rem;
+    margin-bottom: 1rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 1.4rem;
+  }
+
+  /* Data Card: Top Left */
+  .data-card {
+    top: 2rem;
+    left: 2rem;
+    width: 290px;
+  }
+
+  /* Weather Card: Bottom Right */
+  .weather-card {
+    bottom: 2rem;
+    right: 2rem;
+    width: 290px;
+  }
+
+  .data-grid {
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  /* Hide mobile SVG icon on wide screens */
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  /* Requirement: Pseudo-element weather emoji after heading on wide view */
+  .weather-heading::after {
+    content: " ⛅";
+    font-size: 1.3rem;
+  }
+}
