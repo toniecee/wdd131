@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album | WDD 131</title>
+  <meta name="description" content="Dynamic, responsive LDS Temple picture album with interactive filters and lazy-loaded images.">
+  <meta name="author" content="Anthony Agbonoga">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Temple Album</h1>
+      <button id="menu-btn" aria-label="Toggle navigation menu">☰</button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="#" id="filter-home" class="active">Home</a></li>
+          <li><a href="#" id="filter-old">Old</a></li>
+          <li><a href="#" id="filter-new">New</a></li>
+          <li><a href="#" id="filter-large">Large</a></li>
+          <li><a href="#" id="filter-small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h2 id="filter-title">Home</h2>
+    <div id="temple-cards" class="cards-grid">
+      <!-- Dynamically generated temple cards will be injected here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Anthony Agbonoga | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
