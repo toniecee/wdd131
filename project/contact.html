@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriGrow Hub | Advisory Request</title>
+  <meta name="description" content="Submit a demonstration farm advisory request for soil, pest, planting calendar, or post-harvest questions.">
+  <meta name="author" content="Anthony Agbonoga">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <img src="images/agrigrow-logo.webp" alt="AgriGrow Hub logo" width="54" height="54">
+        <div>
+          <h1>AgriGrow Hub</h1>
+          <p>Data-Driven Sustainable Agriculture</p>
+        </div>
+      </div>
+      <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home &amp; Directory</a></li>
+          <li><a href="calculator.html">Yield Calculator</a></li>
+          <li><a href="contact.html" class="active">Advisory Request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Farmer Advisory Request</h2>
+      <p>Use this form to demonstrate how a farmer could submit a field question.</p>
+    </section>
+
+    <section class="form-panel" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Submit a Demonstration Request</h2>
+
+      <form id="consultation-form">
+        <label for="full-name">
+          Full Name:
+          <input type="text" id="full-name" name="full-name" required placeholder="Anthony Agbonoga">
+        </label>
+
+        <label for="email-address">
+          Email Address:
+          <input type="email" id="email-address" name="email-address" required placeholder="grower@example.com">
+        </label>
+
+        <label for="inquiry-topic">
+          Primary Consultation Area:
+          <select id="inquiry-topic" name="inquiry-topic" required>
+            <option value="Soil Health and Fertilization">Soil Health and Fertilization</option>
+            <option value="Pest and Disease Management">Pest and Disease Management</option>
+            <option value="Planting Calendar Planning">Planting Calendar Planning</option>
+            <option value="Post-Harvest Handling and Storage">Post-Harvest Handling and Storage</option>
+          </select>
+        </label>
+
+        <label for="field-description">
+          Describe Your Farm Conditions and Questions:
+          <textarea id="field-description" name="field-description" rows="5" required placeholder="Indicate your location, crop stage, and any symptoms observed."></textarea>
+        </label>
+
+        <button type="submit" class="submit-btn">Submit Advisory Request</button>
+      </form>
+
+      <div id="form-confirmation" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Anthony Agbonoga | Nigeria | WDD 131</p>
+    <p><a href="references.html">Project Citations &amp; References</a> | <a href="siteplan.html">Website Planning Document</a></p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

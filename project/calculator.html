@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriGrow Hub | Yield Calculator</title>
+  <meta name="description" content="Estimate harvest output based on crop type, farm size, and management level.">
+  <meta name="author" content="Anthony Agbonoga">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <img src="images/agrigrow-logo.webp" alt="AgriGrow Hub logo" width="54" height="54">
+        <div>
+          <h1>AgriGrow Hub</h1>
+          <p>Data-Driven Sustainable Agriculture</p>
+        </div>
+      </div>
+      <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home &amp; Directory</a></li>
+          <li><a href="calculator.html" class="active">Yield Calculator</a></li>
+          <li><a href="contact.html">Advisory Request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Dynamic Harvest Yield Estimator</h2>
+      <p>Select a crop, enter your farm size, and choose a management level to estimate possible harvest output.</p>
+    </section>
+
+    <section class="calculator-panel" aria-labelledby="calculator-heading">
+      <h2 id="calculator-heading">Calculate Harvest Output</h2>
+
+      <form id="calculator-form">
+        <label for="calc-crop">
+          Target Crop Enterprise:
+          <select id="calc-crop" name="crop" required>
+            <option value="">-- Choose a crop --</option>
+          </select>
+        </label>
+
+        <label for="calc-hectares">
+          Farm Size in Hectares:
+          <input type="number" id="calc-hectares" name="hectares" min="0.1" step="0.1" placeholder="Example: 2.5" required>
+        </label>
+
+        <label for="calc-management">
+          Field Input and Weed Management Level:
+          <select id="calc-management" name="management" required>
+            <option value="standard">Standard - recommended good agronomic practice</option>
+            <option value="optimal">Optimal - high-grade seed, balanced fertilizer, and irrigation</option>
+            <option value="basic">Basic - rainfed and limited input management</option>
+          </select>
+        </label>
+
+        <button type="submit" class="submit-btn">Calculate Harvest Output</button>
+      </form>
+
+      <div id="calculator-output" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Anthony Agbonoga | Nigeria | WDD 131</p>
+    <p><a href="references.html">Project Citations &amp; References</a> | <a href="siteplan.html">Website Planning Document</a></p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriGrow Hub | Crop Directory</title>
+  <meta name="description" content="AgriGrow Hub crop directory with crop information, maturity periods, planting windows, and benchmark yields.">
+  <meta name="author" content="Anthony Agbonoga">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <script src="scripts/project.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <img src="images/agrigrow-logo.webp" alt="AgriGrow Hub logo" width="54" height="54">
+        <div>
+          <h1>AgriGrow Hub</h1>
+          <p>Data-Driven Sustainable Agriculture</p>
+        </div>
+      </div>
+      <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home &amp; Directory</a></li>
+          <li><a href="calculator.html">Yield Calculator</a></li>
+          <li><a href="contact.html">Advisory Request</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Crop Intelligence for Better Farm Planning</h2>
+      <p>Compare common crops by category, planting window, maturity period, and benchmark yield.</p>
+      <div class="hero-stats">
+        <p class="stat-badge" id="visit-count">Loading visit information...</p>
+        <p class="stat-badge" id="total-crops-stat">Loading crop summary...</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="crop-directory-heading">
+      <h2 id="crop-directory-heading">Crop Directory</h2>
+      <div class="filter-bar" aria-label="Crop filter controls">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="Tuber">Tubers</button>
+        <button class="filter-btn" type="button" data-filter="Grain">Grains</button>
+        <button class="filter-btn" type="button" data-filter="Vegetable">Vegetables</button>
+        <button class="filter-btn" type="button" data-filter="Legume">Legumes</button>
+      </div>
+      <div id="crop-gallery" class="crop-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Anthony Agbonoga | Nigeria | WDD 131</p>
+    <p><a href="references.html">Project Citations &amp; References</a> | <a href="siteplan.html">Website Planning Document</a></p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
