@@ -9,187 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1b4332;
-      --secondary: #2d6a4f;
-      --accent: #d8f3dc;
-      --dark-neutral: #212529;
-      --light-bg: #f8f9fa;
-      --white: #ffffff;
-      --border: #dcdcdc;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Open Sans", Arial, sans-serif;
-      color: var(--dark-neutral);
-      background-color: var(--light-bg);
-      line-height: 1.6;
-      padding: 1rem;
-    }
-
-    main {
-      max-width: 950px;
-      margin: 0 auto;
-      background-color: var(--white);
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-
-    header {
-      border-bottom: 4px solid var(--primary);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Montserrat", Helvetica, sans-serif;
-      color: var(--primary);
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 1.75rem;
-      margin-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.35rem;
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      color: var(--secondary);
-      margin-top: 1rem;
-      margin-bottom: 0.35rem;
-    }
-
-    p,
-    ul {
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.35rem;
-    }
-
-    .logo-mark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 72px;
-      height: 72px;
-      margin: 1rem 0;
-      border-radius: 50%;
-      color: var(--white);
-      background-color: var(--primary);
-      font-family: "Montserrat", Helvetica, sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      border: 6px solid var(--accent);
-    }
-
-    .palette-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-
-    .color-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: var(--white);
-    }
-
-    .swatch {
-      min-height: 84px;
-    }
-
-    .primary { background-color: var(--primary); }
-    .secondary { background-color: var(--secondary); }
-    .accent { background-color: var(--accent); }
-    .neutral { background-color: var(--dark-neutral); }
-
-    .color-card div:last-child {
-      padding: 0.75rem;
-    }
-
-    .font-sample {
-      background-color: var(--accent);
-      border-left: 5px solid var(--secondary);
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .heading-sample {
-      font-family: "Montserrat", Helvetica, sans-serif;
-      font-weight: 700;
-    }
-
-    .body-sample {
-      font-family: "Open Sans", Arial, sans-serif;
-    }
-
-    .wireframe {
-      border: 2px dashed #6c757d;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      background-color: #f1f3f5;
-    }
-
-    .wf-row,
-    .wf-grid {
-      display: grid;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .wf-row {
-      grid-template-columns: 1fr;
-    }
-
-    .wf-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .wf-block {
-      border: 1px solid #adb5bd;
-      border-radius: 4px;
-      background-color: var(--white);
-      padding: 0.75rem;
-      text-align: center;
-      font-weight: 700;
-      color: #495057;
-    }
-
-    @media screen and (max-width: 650px) {
-      main {
-        padding: 1rem;
-      }
-
-      .wf-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <main>
@@ -202,7 +21,7 @@
     <section>
       <h2>Site Name</h2>
       <p><strong>AgriGrow Hub</strong></p>
-      <div class="logo-mark" aria-label="AgriGrow Hub logo concept">AG</div>
+      <div class="logo-mark">AG</div>
       <p>This name was chosen because the site is a central online resource for crop information, harvest planning, and farmer advisory support. The word "Hub" shows that visitors can find several agriculture-related tools in one place.</p>
       <p><strong>Optional domain:</strong> agrigrowhub.org</p>
     </section>
@@ -224,22 +43,22 @@
     <section>
       <h2>Color Schema</h2>
       <div class="palette-grid">
-        <article class="color-card">
+        <div class="color-card">
           <div class="swatch primary"></div>
           <div><strong>Deep Forest Green</strong><br>#1b4332 - headings, header, footer, primary buttons</div>
-        </article>
-        <article class="color-card">
+        </div>
+        <div class="color-card">
           <div class="swatch secondary"></div>
           <div><strong>Foliage Green</strong><br>#2d6a4f - links, hover states, borders, accents</div>
-        </article>
-        <article class="color-card">
+        </div>
+        <div class="color-card">
           <div class="swatch accent"></div>
           <div><strong>Sprout Pale Green</strong><br>#d8f3dc - hero background and result panels</div>
-        </article>
-        <article class="color-card">
+        </div>
+        <div class="color-card">
           <div class="swatch neutral"></div>
           <div><strong>Neutral Charcoal</strong><br>#212529 - main body text</div>
-        </article>
+        </div>
       </div>
     </section>
 
