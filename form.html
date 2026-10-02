@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form | WDD 131</title>
+  <meta name="description" content="WDD 131 product review form assignment with required fields, dynamic products, and confirmation page.">
+  <meta name="author" content="Anthony Agbonoga">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <label for="product">
+        Product Name <span class="required">*</span>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <div class="rating-group">
+          <label for="rating1">
+            <span>☆</span>
+            <input type="radio" id="rating1" name="rating" value="1" required>
+          </label>
+          <label for="rating2">
+            <span>☆☆</span>
+            <input type="radio" id="rating2" name="rating" value="2">
+          </label>
+          <label for="rating3">
+            <span>☆☆☆</span>
+            <input type="radio" id="rating3" name="rating" value="3">
+          </label>
+          <label for="rating4">
+            <span>☆☆☆☆</span>
+            <input type="radio" id="rating4" name="rating" value="4">
+          </label>
+          <label for="rating5">
+            <span>☆☆☆☆☆</span>
+            <input type="radio" id="rating5" name="rating" value="5">
+          </label>
+        </div>
+      </fieldset>
+
+      <label for="install-date">
+        Date of Installation <span class="required">*</span>
+        <input type="date" id="install-date" name="install-date" required>
+      </label>
+
+      <fieldset>
+        <legend>Which features did you find useful?</legend>
+        <p class="hint">Check all that apply.</p>
+        <label class="check-option" for="durability">
+          <input type="checkbox" id="durability" name="features" value="durability">
+          Durability
+        </label>
+        <label class="check-option" for="ease-of-use">
+          <input type="checkbox" id="ease-of-use" name="features" value="ease-of-use">
+          Ease of Use
+        </label>
+        <label class="check-option" for="performance">
+          <input type="checkbox" id="performance" name="features" value="performance">
+          Performance
+        </label>
+        <label class="check-option" for="design">
+          <input type="checkbox" id="design" name="features" value="design">
+          Design
+        </label>
+      </fieldset>
+
+      <label for="review">
+        Written Review
+        <textarea id="review" name="review" rows="5" placeholder="Share your experience with the product."></textarea>
+      </label>
+
+      <label for="username">
+        Your Name
+        <input type="text" id="username" name="username" placeholder="Optional">
+      </label>
+
+      <input type="submit" value="Submit Product Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Anthony Agbonoga | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
